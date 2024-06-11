@@ -1,0 +1,26 @@
+public class chat2 {
+    // ฟังก์ชันสำหรับตรวจสอบว่าเลข n เป็นจำนวนเฉพาะหรือไม่
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println();
+
+        // วนลูปเพื่อหาและแสดงจำนวนเฉพาะที่น้อยกว่า 100
+        for (int i = 2; i < 100; i++) {
+            if (isPrime(i)) {
+                System.out.println(i + " ");
+            }
+        }
+    }
+}
+
